@@ -46,17 +46,6 @@ function scene:create( event )
     scene_text:setFillColor(1, 0, 0)
     sceneGroup:insert(scene_text)
 
-    test_table = {}
-
-    for x = 40, 280, 40 do
-        for y = 140, 340, 40 do
-            test_table[x] = contentCenterY
-        end
-    end
-
-    for k, v in pairs(test_table) do
-        print(k, v)
-    end
 
     local row1 = {
         [30 + 10] = 40 + 20 + 20 + 20 + 20+ 20,

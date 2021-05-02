@@ -20,18 +20,6 @@ function scene:create( event )
     back_button.y = display.contentCenterY - 245
     back_button:addEventListener("tap", go_to_level_menu)
 
-    test_table = {}
-
-    for x = 40, 280, 40 do
-        for y = 140, 340, 40 do
-            test_table[y] = x
-        end
-    end
-
-    for k, v in pairs(test_table) do
-        print(k, v)
-    end
-
     local text_options = {
         text = "Прослушай историю и ответь на вопросы",     
         x = 160,
