@@ -30,10 +30,6 @@ function scene:hide( event )
     local sceneGroup = self.view
     local phase = event.phase
 
-    if (phase == "did") then 
-        composer.removeScene("menu")
-    end
-
 end
 
 function scene:destroy( event )

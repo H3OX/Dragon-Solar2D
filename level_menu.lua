@@ -3,12 +3,16 @@ local widget = require("widget")
  
 local scene = composer.newScene()
 
+local function go_to_menu()
+    composer.gotoScene("menu")
+end
+
 local function switch_to_level1()
     composer.gotoScene("levels.level1")
 end
 
 local function switch_to_level2()
-    composer.gotoScene("level2")
+    composer.gotoScene("levels.level2")
 end
 
 local function switch_to_level3()
@@ -27,7 +31,15 @@ end
 function scene:create( event )
     local sceneGroup = self.view
 
-    local image = display.newImageRect()
+    local background = display.newImageRect(sceneGroup, "images/level_selector_background.png", 320, 565)
+    background.x = display.contentCenterX
+    background.y = display.contentCenterY
+
+
+    local back_button = display.newImageRect(sceneGroup, "images/back_button.png", 50, 50)
+    back_button.x = display.contentCenterX - 120
+    back_button.y = display.contentCenterY - 245
+    back_button:addEventListener("tap", go_to_menu)
 
     local level1_button = display.newImageRect(sceneGroup, "images/play_game.png", 100, 100)
     level1_button.x = display.contentCenterX
@@ -73,10 +85,6 @@ end
 function scene:hide( event )
     local sceneGroup = self.view
     local phase = event.phase
-
-    if (phase == "did") then 
-        composer.removeScene("menu")
-    end
 
 end
 
