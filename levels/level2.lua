@@ -25,13 +25,13 @@ end
 function scene:create( event )
     local sceneGroup = self.view
     local phase = event.phase
-    local background_image = display.newImageRect(sceneGroup, "images/background_image.png", 320, 575)
+    local background_image = display.newImageRect(sceneGroup, "images/level_menu_background.png", 320, 575)
     background_image.x = display.contentCenterX
     background_image.y = display.contentCenterY
 
-    local back_button = display.newImageRect(sceneGroup, "images/back_button.png", 50, 50)
-    back_button.x = display.contentCenterX - 120
-    back_button.y = display.contentCenterY - 245
+    local back_button = display.newImageRect(sceneGroup, "images/back_button.png", 30, 30)
+    back_button.x = display.contentCenterX - 130
+    back_button.y = display.contentCenterY - 250
     back_button:addEventListener("tap", go_to_level_menu)
 
     local flower_path = "images/flower_pic.png"
