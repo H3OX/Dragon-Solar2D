@@ -34,7 +34,7 @@ function scene:create( event )
     back_button.y = display.contentCenterY - 250
     back_button:addEventListener("tap", go_to_level_menu)
 
-    local flower_path = "images/flower_pic.png"
+    local flower_path = "images/flower.png"
     local mushroom_path = "images/mushroom_pic.png"
     local sun_path = "images/sun_pic.png"
     local tree_path = "images/tree_pic.png"
