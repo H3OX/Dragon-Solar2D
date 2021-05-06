@@ -20,11 +20,11 @@ local function switch_to_level3()
 end
 
 local function switch_to_level4()
-    composer.gotoScene("level4")
+    composer.gotoScene("levels.level4")
 end
 
 local function switch_to_level5()
-    composer.gotoScene("level5")
+    composer.gotoScene("levels.level5")
 end
 
 local function switch_to_level6()
