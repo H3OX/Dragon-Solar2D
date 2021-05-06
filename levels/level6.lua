@@ -32,7 +32,6 @@ function scene:create( event )
     text:setFillColor(0, 0, 0)
 
     canvas = fingerPaint.newCanvas()
-    canvas.isActive = true
     canvas.width, canvas.height = 350, 600
     canvas.x = display.contentCenterX
     canvas.y = display.contentCenterY
@@ -90,7 +89,8 @@ function scene:create( event )
 end
 
 function scene:show( event )
-    local sceneGroup = self.view   
+    local sceneGroup = self.view  
+    canvas.isActive = true 
 end
 
 function scene:hide( event )
@@ -103,7 +103,7 @@ function scene:destroy( event )
     local sceneGroup = self.view
 
     if (phase == "did") then 
-        composer.removeScene("level5")
+        composer.removeScene("level6")
     end
 
 

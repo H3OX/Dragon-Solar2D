@@ -28,7 +28,7 @@ function scene:create( event )
     back_button:addEventListener("tap", go_to_level_menu)
 
     canvas = fingerPaint.newCanvas()
-    canvas.isActive = true
+
     canvas.width, canvas.height = 350, 800
     canvas.x = display.contentCenterX
     canvas.y = display.contentCenterY
@@ -47,6 +47,7 @@ function scene:create( event )
 end
 
 function scene:show( event )
+    canvas.isActive = true
     local sceneGroup = self.view   
 end
 

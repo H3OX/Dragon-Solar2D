@@ -23,7 +23,7 @@ function scene:create( event )
     back_button:addEventListener("tap", go_to_level_menu)
 
     canvas = fingerPaint.newCanvas()
-    canvas.isActive = true
+    
     canvas.width, canvas.height = 60, 300
     canvas.x = display.contentCenterX + 100
     canvas.y = display.contentCenterY + 50
@@ -87,6 +87,7 @@ function scene:create( event )
 end
 
 function scene:show( event )
+    canvas.isActive = true
     local sceneGroup = self.view   
 end
 
@@ -100,7 +101,7 @@ function scene:destroy( event )
     local sceneGroup = self.view
 
     if (phase == "did") then 
-        composer.removeScene("level5")
+        composer.removeScene("level7")
     end
 
 

@@ -1,3 +1,3 @@
 local composer = require("composer");
-composer.gotoScene("levels.level7");
+composer.gotoScene("menu");
 
