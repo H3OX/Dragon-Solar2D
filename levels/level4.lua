@@ -40,10 +40,6 @@ function scene:create( event )
     erase_button.y = display.contentCenterY + 250
     erase_button:addEventListener("tap", onTouch)
 
-    
- -- local background_music = audio.loadStream('music_placeholder.mp3')
- -- local background_music_channel = audio.play( background_music, { channel=1, loops=-1, fadein=5000 } )
-
 end
 
 function scene:show( event )
